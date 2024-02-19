@@ -2,7 +2,7 @@ const express=require("express");
 const dotenv=require("dotenv")
 const cors = require("cors")
 const router = require("./src/routes/route")
-const FileUpload=require("express-fileupload")
+
 const app=express()
 const dbConnection=require("./src/config/dbconnection")
  dotenv.config({path:"./src/config/.env"})
@@ -12,9 +12,7 @@ const dbConnection=require("./src/config/dbconnection")
 
  app.use(cors());
  app.use(express.json())
-//  app.use(FileUpload({
-//     useTempFiles:true
-//  }))
+
 app.use(router)
 
 
