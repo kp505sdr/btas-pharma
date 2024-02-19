@@ -10,13 +10,7 @@ const dbConnection=require("./src/config/dbconnection")
  dbConnection()
  const PORT=process.env.PORT ||5000
 
- app.use(cors(
-   {
-    origin:["https://btas-pharma-server.vercel.app"],
-    methods:["POST","GET"],
-    credentials:true
-   }
- ));
+ app.use(cors());
  app.use(express.json())
 //  app.use(FileUpload({
 //     useTempFiles:true
